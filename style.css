@@ -2,59 +2,67 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    /* overflow: hidden;
-    position: relative; */
 }
 
 .upper_box {
     background-color: #FFCD9E;
-    height: 75vh;
+    overflow-x: hidden;
+    width: auto;
+    height: 37rem;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
     justify-content: space-between;
+    flex-direction: row;
 }
 .upper_left{
-    margin-left: 136px;
+    display: flex;
+  flex-direction: column;
+    padding-left: 8.5rem;
     display: inline-block;
     
 }
 .main_text{
+    padding-top: 5.188rem;
     font-size: 2.25rem;
     width: 35.2rem;
-    height: 108px;
-    line-height: 54px;
+    height: 6.75rem;
+    line-height: 3.375rem;
     font-weight: 700;
 }
 .content_text{
     display: flex;
     font-size: 1.5rem;
     width: 33.5rem;
-    /* top:219px; */
     height: 6.5rem;
-    line-height:32px;
+    line-height:2rem;
     font-weight: 500;
     color: #484848;
 }
 .conclude_text{
     font-size: 1.5rem;
     width: 16.7rem;
-    line-height:32px;
+    line-height:2rem;
     font-weight: 800;
     height: 2.6rem;
     color: #282828;
+    margin-top: 1.2rem;
 
 }
+
 .form_box #email-inp{
     border-radius: 4px;
     border-color: #000000;
     background:  #FFFFFF;
-    width: 344px;
-    height: 64px;
+    width: 21.5rem;
+    height: 4rem;
 }
 
 ::placeholder{
     padding-left: 22px;
     font-size: 1.5rem;
-    width: 350px;
-    line-height:32px;
+    width: 21.875rem;
+    line-height:2rem;
     font-weight: 600;
     height: 65px;
     color: #888888;
@@ -62,14 +70,14 @@ body {
 
 button{
     margin-top: 11px;
-width: 216px;
-height: 64px;
+width: 13.5rem;
+height: 4rem;
 left: 496px;
 border-radius: 8px;
 background: #282828;
 font-size: 1.5rem;
 font-weight: 700;
-line-height: 24px;
+line-height: 1.5rem;
 letter-spacing: 0em;
 text-align: center;
 color: #FFFFFF;
@@ -78,69 +86,160 @@ color: #FFFFFF;
 .tagline_text{
 font-size: 1rem;
 font-weight: 500;
-line-height: 26px;
+line-height: 1.625rem;
 letter-spacing: 0em;
 text-align: center;
 color: #FFFFFF;
-width: 344px;
-height: 61px;
-top: 479px;
-left: 134px;
-
+width: 21.5rem;
+height: 3.813rem;
+top: 29.938rem;
+left: 8.375rem;
 }
 
 #person-img
 {
-    width: 19.352rem;
-    height: 24.245rem;
-    margin-top: 66.4px;
-    margin-right: 91.87px;  
+    width: 24.595rem;
+    height: 27.653rem;
+    padding-top: 4.15rem;
+    padding-right: 5.742rem;
 }
 
 .upper_right{
-    float: right;
+    width: 35.938rem;
+    height: 35rem;
 }
 
 
 .lower_box {
+    overflow-x: hidden;
     background-color: #282828;
-    height: 30vh;
+    height: 18.625rem;
     display: flex;
     width: 100%;
-
+    justify-content: space-around;
 }
 
 .lower_left{
     flex:1;
-    margin-left: 157px;
-    margin-top: 50px;
+    margin-left: 9.813rem;
+    margin-top: 3.125rem;
 }
 ul{
     margin: 0;
     color: #FFFFFF;
     font-weight: 400;
     font-size: 1.25rem;
-    line-height: 32px;
+    line-height: 2rem;
 }
 
 .lower_right{
     float: right;
-    margin-right: 193px;
-    margin-top: 35px;
+    margin-right: 12.063rem;
+    margin-top: 2.188rem;
     align-items: end;
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
 }
 
-.lower_right p{
+.lower_right a{
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 18px;
     letter-spacing: 0em;
     text-align: right;
     color: #FFFFFF;
     }
 
 .logo_right img{
-    width: 29.41px;
-    height: 27.42px;
+    width: 1.838rem;
+    height: 1.714rem;
 }
 
+@media screen and (max-width: 1000px)
+{
+    .upper_left, .upper_right{
+        padding-left: 3.5rem;
+    }
+    #person-img
+    {
+        width: 25.595rem;
+        height: 28.653rem;
+        padding-bottom: 5%;
+    }
+    .upper_box{
+        display: flex;
+        flex-direction: column;
+    }
+    .form_box #email-inp, button{
+        width: 50%;
+        font-size: medium;
+    }
+    ::placeholder{
+        padding-left: 8%;
+        font-size: larger;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .upper_box{
+        display: flex;
+        flex-direction: column;
+    }
+    .upper_left, .upper_right{
+        padding-left: 3.5rem;
+    }
+    #person-img
+    {
+        width: 19.595rem;
+        height: 22.653rem;
+        padding-bottom: 5%;
+    }
+    .lower_box{
+        display: flex;
+        flex-direction: row;
+    }
+    .lower_left{
+        flex:1;
+        margin-left: 2.813rem;
+    }
+    ul{
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    .lower_right{
+        margin-right : 5%;
+    }
+    .lower_right a{
+        font-size: 1rem;
+    }
+    .lower_left{
+        margin-left: 1%;
+    }
+    .logo_right img{
+        width: 1.1rem;
+        height: 1rem;
+    }
+    .main_text{
+        font-size: 1.5rem;
+        width: 90%;
+        padding-top: 2%;
+        padding-bottom: 5%;
+        line-height: 40px;
+    }
+    .content_text, .conclude_text, .tagline_text{
+        font-size: large;
+        width: 90%;
+        padding-bottom: 2%;
+    }
+
+    .form_box #email-inp, button{
+        width: 90%;
+        font-size: medium;
+    }
+    ::placeholder{
+        padding-left: 8%;
+        font-size: medium;
+    }
+}
